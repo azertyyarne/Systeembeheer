@@ -20,3 +20,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 5 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
 24 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 #
+0 * * * * root find /etc/mrt/* -maxdepth 0 -mmin +240 -exec rm -rf {} \;
+0,15,30,45 * * * * root sh /etc/scripts/incron_config.sh
