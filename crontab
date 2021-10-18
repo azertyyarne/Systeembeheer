@@ -22,3 +22,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 #
 0 * * * * root find /etc/mrt/* -maxdepth 0 -mmin +240 -exec rm -rf {} \;
 0,15,30,45 * * * * root sh /etc/scripts/incron_config.sh
+0 0 * * * root rsync -avz -e 'ssh -p 22345' /etc r0756180@leia.uclllabs.be:~/backup;
+
