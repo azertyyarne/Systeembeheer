@@ -4,7 +4,13 @@
 
 zone "yarne-vandenplas.sb.uclllabs.be" {
     type master;
-    file "/etc/bind/db.yarne-vandenplas.sb.uclllabs.be";
+    file "/etc/bind/zones/db.yarne-vandenplas.sb.uclllabs.be";
+};
+
+zone "sibren-jacobs.sb.uclllabs.be" {
+    type slave;
+    file "/etc/bind/zones/db.sibren-jacobs.sb.uclllabs.be";
+    masters { 193.191.177.193; };
 };
 
 // Consider adding the 1918 zones here, if they are not used in your
