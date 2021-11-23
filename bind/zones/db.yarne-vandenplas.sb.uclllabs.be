@@ -14,7 +14,9 @@ $TTL    300
 @       IN      AAAA    ::1
 ns	IN	A	193.191.177.205
 www	IN	A	193.191.177.205
+www1	IN	A	193.191.177.205
 test	IN	A	193.191.177.254
 @	IN	NS	ns1.uclllabs.be.
 @	IN	NS	ns2.uclllabs.be.
 @	IN	NS	ns.sibren-jacobs.sb.uclllabs.be.
+
