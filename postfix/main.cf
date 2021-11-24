@@ -15,10 +15,10 @@ mydomain = mx.yarne-vandenplas.sb.uclllabs.be
 myorigin = $mydomain
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = $myhostname, localhost.$mydomain, localhost
+mydestination = localhost, $mydomain
 relayhost = 
 mynetworks = 127.0.0.0/8
-inet_interfaces = loopback-only
+inet_interfaces = all
 recipient_delimiter = +
 
 compatibility_level = 2
