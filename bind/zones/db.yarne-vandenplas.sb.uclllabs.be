@@ -3,7 +3,7 @@
 ;
 $TTL    300
 @       IN      SOA     ns.yarne-vandenplas.sb.uclllabs.be. root.yarne-vandenplas.sb.uclllabs.be. (
-                              6         ; Serial
+                              7         ; Serial
                             300         ; Refresh
                             300         ; Retry
                             300         ; Expire
@@ -20,4 +20,5 @@ test	IN	A	193.191.177.254
 @	IN	NS	ns1.uclllabs.be.
 @	IN	NS	ns2.uclllabs.be.
 @	IN	NS	ns.sibren-jacobs.sb.uclllabs.be.
-
+@	IN	MX	10 mx.yarne-vandenplas.sb.uclllabs.be.
+mx	IN	A	193.191.177.205
