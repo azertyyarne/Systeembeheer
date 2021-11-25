@@ -60,4 +60,4 @@ ntp:x:118:
 bind:x:119:
 dovecot:x:120:
 dovenull:x:121:
-vmail:x:5000:postfix
+vmail:x:5000:postfix,dovecot
