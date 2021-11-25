@@ -2,6 +2,9 @@
 
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
 biff = no
+myhostname = mx.yarne-vandenplas.sb.uclllabs.be
+mydomain = mx.yarne-vandenplas.sb.uclllabs.be
+relay_domains =
 
 # appending .domain is the MUA's job.
 append_dot_mydomain = no
@@ -10,21 +13,22 @@ append_dot_mydomain = no
 #delay_warning_time = 4h
 
 readme_directory = no
-myhostname = mx.yarne-vandenplas.sb.uclllabs.be
-mydomain = mx.yarne-vandenplas.sb.uclllabs.be
-myorigin = $mydomain
+myorigin = yarne-vandenplas.sb.uclllabs.be
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = localhost, $mydomain
+mydestination = mx.yarne-vandenplas.sb.uclllabs.be, localhost.yarne-vandenplas.sb.uclllabs.be, localhost
 relayhost = 
-mynetworks = 127.0.0.0/8
+mynetworks = 127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 193.191.177.0/32
 inet_interfaces = all
 recipient_delimiter = +
+inet_protocols = all
 
 compatibility_level = 2
 
+virtual_mailbox_limit = 104857600
+message_size_limit = 52428800
 virtual_mailbox_domains = /etc/postfix/virtual_domains
-virtual_mailbox_base = /var/mail/vhosts
+virtual_mailbox_base = /var/vmail
 virtual_mailbox_maps = hash:/etc/postfix/vmailbox
 virtual_alias_maps = hash:/etc/postfix/virtual_alias
 virtual_minimum_uid = 100
