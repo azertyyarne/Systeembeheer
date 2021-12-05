@@ -24,3 +24,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 0,15,30,45 * * * * root sh /etc/scripts/incron_config.sh
 0 0 * * * root rsync -avz -e 'ssh -p 22345' /etc r0756180@leia.uclllabs.be:~/backup;
 @reboot root arp -s 193.191.177.254 ca:fe:c0:ff:ee:00
+@reboot root systemctl restart ssh
