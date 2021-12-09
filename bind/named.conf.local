@@ -13,6 +13,10 @@ zone "sibren-jacobs.sb.uclllabs.be" {
     masters { 193.191.177.193; };
 };
 
+zone "6.f.0.7.c.d.e.f.f.f.3.f.7.d.c.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.e.f.ip6.arpa" {
+    type master;
+    file "/etc/bind/zones/fe80::cd7:f3ff:fedc:70f6.rdns"
+};
 // Consider adding the 1918 zones here, if they are not used in your
 // organization
 //include "/etc/bind/zones.rfc1918";
